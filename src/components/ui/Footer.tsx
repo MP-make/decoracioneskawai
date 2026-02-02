@@ -49,15 +49,23 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/about"
                   className="text-gray-300 hover:text-brand-300 transition-colors duration-200"
                 >
-                  Cómo comprar
+                  Nosotros
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/contact"
+                  className="text-gray-300 hover:text-brand-300 transition-colors duration-200"
+                >
+                  Contacto
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
                   className="text-gray-300 hover:text-brand-300 transition-colors duration-200"
                 >
                   Envíos
@@ -65,18 +73,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/contact"
                   className="text-gray-300 hover:text-brand-300 transition-colors duration-200"
                 >
                   Reclamaciones
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-brand-300 transition-colors duration-200"
-                >
-                  Términos y Condiciones
                 </a>
               </li>
             </ul>

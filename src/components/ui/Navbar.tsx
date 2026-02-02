@@ -13,10 +13,10 @@ export default function Navbar() {
 
   const menuLinks = [
     { name: 'Inicio', href: '/' },
-    { name: 'San Valentín', href: '#' },
-    { name: 'Decoraciones', href: '#' },
-    { name: 'Globos', href: '#' },
-    { name: 'Contacto', href: '#' },
+    { name: 'Nosotros', href: '/about' },
+    { name: 'Decoraciones', href: '/' },
+    { name: 'San Valentín', href: '/' },
+    { name: 'Contacto', href: '/contact' },
   ];
 
   return (

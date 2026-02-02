@@ -1,14 +1,14 @@
 'use client';
 
-import { PartyPopper, Baby, Gift, Flower2, Gem } from 'lucide-react';
+import Image from 'next/image';
 
-// Datos de las categorías - KAWAI (Categorías Reales)
+// Datos de las categorías - KAWAI (Categorías Reales con imágenes)
 const categories = [
-  { id: 1, name: 'Decoraciones', icon: PartyPopper, color: 'text-brand-500' },
-  { id: 2, name: 'Infantil', icon: Baby, color: 'text-brand-500' },
-  { id: 3, name: 'Detalles', icon: Gift, color: 'text-brand-500' },
-  { id: 4, name: 'Flores', icon: Flower2, color: 'text-brand-500' },
-  { id: 5, name: 'Joyería', icon: Gem, color: 'text-brand-500' },
+  { id: 1, name: 'Decoraciones', image: '/catalogo/deco-15.jpg' },
+  { id: 2, name: 'Infantil', image: '/catalogo/opitos-baby.jpg' },
+  { id: 3, name: 'Detalles', image: '/catalogo/tutsi-pop.jpg' },
+  { id: 4, name: 'Flores', image: '/catalogo/flores-tejidas.jpg' },
+  { id: 5, name: 'Joyería', image: '/catalogo/joyas.jpg' },
 ];
 
 export default function CategoryRail() {
@@ -29,21 +29,25 @@ export default function CategoryRail() {
         <div className="relative px-2">
           <div className="flex gap-6 md:gap-8 overflow-x-auto scrollbar-hide py-4 px-2">
             {categories.map((category) => {
-              const IconComponent = category.icon;
-              
               return (
                 <div
                   key={category.id}
                   className="flex-shrink-0 cursor-pointer group"
                 >
-                  {/* Círculo con icono */}
+                  {/* Círculo con imagen */}
                   <div className="relative">
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-brand-200 flex items-center justify-center transition-all duration-300 group-hover:border-brand-500 group-hover:scale-110 group-hover:shadow-xl shadow-md">
-                      <IconComponent className={`w-9 h-9 md:w-11 md:h-11 ${category.color} transition-transform duration-300 group-hover:scale-110`} />
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-brand-200 transition-all duration-300 group-hover:border-brand-500 group-hover:scale-110 group-hover:shadow-xl shadow-md">
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
                     </div>
                     
                     {/* Efecto de resplandor en hover */}
-                    <div className="absolute inset-0 rounded-full bg-brand-500/0 group-hover:bg-brand-500/5 transition-all duration-300"></div>
+                    <div className="absolute inset-0 rounded-full bg-brand-500/0 group-hover:bg-brand-500/10 transition-all duration-300 pointer-events-none"></div>
                   </div>
 
                   {/* Nombre de la categoría */}

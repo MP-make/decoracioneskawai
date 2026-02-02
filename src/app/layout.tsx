@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AnnouncementBar from "@/components/ui/AnnouncementBar";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import { CartProvider } from "@/context/CartContext";
 
 const geistSans = Geist({
@@ -29,9 +31,11 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-brand-50`}>
         <CartProvider>
+          <AnnouncementBar />
           <Navbar /> 
           {children}
           <Footer />
+          <FloatingWhatsApp />
         </CartProvider>
       </body>
     </html>
