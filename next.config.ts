@@ -1,10 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  /* 🔥 ESTA ES LA LÍNEA QUE TE FALTA PARA ARREGLAR EL 404: */
+  output: "standalone",
+
   /* Opciones de React */
   reactStrictMode: true,
 
-  /* IMPORTANTE: Ignorar errores de TypeScript y ESLint durante el build de Vercel */
+  /* Ignorar errores durante el build */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -12,7 +15,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  /* Configuración de Imágenes (para que funcionen las de Unsplash y locales) */
+  /* Configuración de Imágenes */
   images: {
     remotePatterns: [
       {
@@ -24,7 +27,6 @@ const nextConfig: NextConfig = {
         hostname: 'plus.unsplash.com',
       },
     ],
-    // Permitir imágenes locales sin optimización estricta si es necesario
     unoptimized: true,
   },
 };
