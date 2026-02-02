@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/ui/Navbar"; // <--- Importamos tu nueva creación
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-brand-50`}>
-        {/* Aquí va el Navbar para que sea visible en toda la web */}
-        <Navbar /> 
-        {children}
+        <CartProvider>
+          <Navbar /> 
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

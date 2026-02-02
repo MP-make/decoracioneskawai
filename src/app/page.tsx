@@ -1,5 +1,6 @@
 import Hero from "@/components/ui/Hero";
 import CategoryRail from "@/components/ecommerce/CategoryRail";
+import FeaturedProducts from "@/components/ecommerce/FeaturedProducts";
 
 export default function Home() {
   return (
@@ -12,10 +13,8 @@ export default function Home() {
       {/* Carrusel de Categorías */}
       <CategoryRail />
       
-      {/* Espacio para lo que sigue */}
-      <div className="py-10 text-center">
-        <p className="text-gray-400 text-sm">Próximamente: Productos destacados...</p>
-      </div>
+      {/* Productos Destacados */}
+      <FeaturedProducts />
     </main>
   );
 }

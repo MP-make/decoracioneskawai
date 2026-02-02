@@ -1,14 +1,14 @@
 'use client';
 
-import { Heart, Cake, PartyPopper, Coffee, Smile } from 'lucide-react';
+import { PartyPopper, Baby, Gift, Flower2, Gem } from 'lucide-react';
 
-// Datos de las categorías
+// Datos de las categorías - KAWAI (Categorías Reales)
 const categories = [
-  { id: 1, name: 'San Valentín', icon: Heart, color: 'text-brand-500' },
-  { id: 2, name: 'Cumpleaños', icon: Cake, color: 'text-brand-500' },
-  { id: 3, name: 'Globos', icon: PartyPopper, color: 'text-brand-500' },
-  { id: 4, name: 'Desayunos', icon: Coffee, color: 'text-brand-500' },
-  { id: 5, name: 'Peluches', icon: Smile, color: 'text-brand-500' },
+  { id: 1, name: 'Decoraciones', icon: PartyPopper, color: 'text-brand-500' },
+  { id: 2, name: 'Infantil', icon: Baby, color: 'text-brand-500' },
+  { id: 3, name: 'Detalles', icon: Gift, color: 'text-brand-500' },
+  { id: 4, name: 'Flores', icon: Flower2, color: 'text-brand-500' },
+  { id: 5, name: 'Joyería', icon: Gem, color: 'text-brand-500' },
 ];
 
 export default function CategoryRail() {
