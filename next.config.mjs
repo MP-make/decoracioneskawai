@@ -1,21 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* 🔥 ESTA ES LA LÍNEA QUE TE FALTA PARA ARREGLAR EL 404: */
-  output: "standalone",
-
-  /* Opciones de React */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Quitamos 'standalone' para dejar que Vercel decida lo mejor
   reactStrictMode: true,
-
-  /* Ignorar errores durante el build */
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-
-  /* Configuración de Imágenes */
   images: {
     remotePatterns: [
       {
