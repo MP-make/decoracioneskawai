@@ -25,27 +25,27 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 // Provider del carrito
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [isClient, setIsClient] = useState(false);
 
-  // Cargar carrito desde localStorage al montar
+  // Cargar carrito desde localStorage al montar (solo en cliente)
   useEffect(() => {
-    setIsClient(true);
-    const savedCart = localStorage.getItem('kawai-cart');
-    if (savedCart) {
-      try {
-        setCart(JSON.parse(savedCart));
-      } catch (error) {
-        console.error('Error al cargar el carrito:', error);
+    if (typeof window !== 'undefined') {
+      const savedCart = localStorage.getItem('kawai-cart');
+      if (savedCart) {
+        try {
+          setCart(JSON.parse(savedCart));
+        } catch (error) {
+          console.error('Error al cargar el carrito:', error);
+        }
       }
     }
   }, []);
 
-  // Guardar carrito en localStorage cuando cambie
+  // Guardar carrito en localStorage cuando cambie (solo en cliente)
   useEffect(() => {
-    if (isClient) {
+    if (typeof window !== 'undefined') {
       localStorage.setItem('kawai-cart', JSON.stringify(cart));
     }
-  }, [cart, isClient]);
+  }, [cart]);
 
   // Agregar producto al carrito
   const addToCart = (product: Product, quantity: number = 1) => {
