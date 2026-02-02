@@ -34,7 +34,7 @@ export default function CategoryRail() {
                   key={category.id}
                   className="flex-shrink-0 cursor-pointer group"
                 >
-                  {/* Círculo con imagen */}
+                  {/* Círculo con imagen - Optimizado Mobile */}
                   <div className="relative">
                     <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-brand-200 transition-all duration-300 group-hover:border-brand-500 group-hover:scale-110 group-hover:shadow-xl shadow-md">
                       <Image
@@ -50,7 +50,7 @@ export default function CategoryRail() {
                     <div className="absolute inset-0 rounded-full bg-brand-500/0 group-hover:bg-brand-500/10 transition-all duration-300 pointer-events-none"></div>
                   </div>
 
-                  {/* Nombre de la categoría */}
+                  {/* Nombre de la categoría - Texto optimizado Mobile */}
                   <p className="text-xs md:text-sm font-medium text-gray-600 text-center mt-3 max-w-[80px] md:max-w-[96px] group-hover:text-brand-500 transition-colors duration-300">
                     {category.name}
                   </p>

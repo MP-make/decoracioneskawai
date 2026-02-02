@@ -4,7 +4,7 @@ import { Heart, MessageCircle } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-pink-50 py-12 md:py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-pink-50 py-8 lg:py-20">
       {/* Decoración de fondo */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-brand-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
@@ -13,7 +13,7 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Columna Izquierda - Texto */}
           <div className="text-center lg:text-left space-y-6 z-10">
@@ -22,8 +22,8 @@ export default function Hero() {
               ✨ Especial San Valentín
             </div>
 
-            {/* Título Principal */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            {/* Título Principal - Optimizado Mobile */}
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
               Haz que su corazón{' '}
               <span className="text-brand-500 relative inline-block">
                 lata más fuerte
@@ -69,26 +69,30 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Columna Derecha - Visual */}
+          {/* Columna Derecha - Video Contenido */}
           <div className="relative z-10">
             <div className="relative group">
-              {/* Imagen Principal */}
-              <div className="relative overflow-hidden rounded-4xl shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.02]">
-                <img
-                  src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=1000&auto=format&fit=crop"
-                  alt="Regalos y decoraciones especiales"
-                  className="w-full h-auto object-cover aspect-square lg:aspect-[4/5]"
-                />
+              {/* Contenedor del Video con bordes redondeados */}
+              <div className="relative w-full max-w-md mx-auto lg:max-w-full h-[500px] lg:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.02]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/catalogo/hero-video.mp4" type="video/mp4" />
+                </video>
                 
                 {/* Overlay gradiente sutil */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-500/10 to-transparent"></div>
-              </div>
 
-              {/* Sticker de Precio Flotante */}
-              <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-accent-gold text-white rounded-full w-24 h-24 sm:w-32 sm:h-32 flex flex-col items-center justify-center shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-white">
-                <span className="text-xs sm:text-sm font-semibold">Desde</span>
-                <span className="text-xl sm:text-3xl font-bold">S/ 45</span>
-                <span className="text-xs">✨</span>
+                {/* Sticker de Precio Flotante - Reposicionado */}
+                <div className="absolute top-4 right-4 z-20 bg-accent-gold text-white rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-white">
+                  <span className="text-[10px] md:text-xs font-semibold">Desde</span>
+                  <span className="text-lg md:text-2xl font-bold">S/ 45</span>
+                  <span className="text-xs">✨</span>
+                </div>
               </div>
 
               {/* Badge decorativo inferior */}

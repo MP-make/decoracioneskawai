@@ -14,8 +14,8 @@ export default function Navbar() {
   const menuLinks = [
     { name: 'Inicio', href: '/' },
     { name: 'Nosotros', href: '/about' },
-    { name: 'Decoraciones', href: '/' },
-    { name: 'San Valentín', href: '/' },
+    { name: 'Decoraciones', href: '/decoraciones' },
+    { name: 'San Valentín', href: '/san-valentin' },
     { name: 'Contacto', href: '/contact' },
   ];
 
@@ -33,10 +33,10 @@ export default function Navbar() {
         <div className="bg-white/90 backdrop-blur-md shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-              {/* Logo */}
+              {/* Logo - Optimizado Mobile */}
               <Link href="/" className="flex-shrink-0">
                 <div className="flex flex-col">
-                  <h1 className="text-2xl font-bold text-gray-800">Kawai</h1>
+                  <h1 className="text-xl md:text-2xl font-bold text-gray-800">Kawai</h1>
                   <p className="text-xs text-gray-500">Decorando momentos</p>
                 </div>
               </Link>

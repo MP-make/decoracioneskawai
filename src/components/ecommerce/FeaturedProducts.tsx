@@ -61,16 +61,16 @@ export default function FeaturedProducts() {
                   </div>
                 )}
 
-                {/* Botón de acción circular flotante */}
+                {/* Botón de acción circular flotante - Optimizado Mobile */}
                 <button
-                  className="absolute bottom-4 right-4 bg-white text-brand-500 p-3 rounded-full shadow-lg hover:bg-brand-500 hover:text-white transition-all duration-300 hover:scale-110"
+                  className="absolute bottom-3 right-3 md:bottom-4 md:right-4 bg-white text-brand-500 p-2.5 md:p-3 rounded-full shadow-lg hover:bg-brand-500 hover:text-white transition-all duration-300 hover:scale-110"
                   aria-label={`Agregar ${product.name} al carrito`}
                   onClick={(e) => {
                     e.preventDefault();
                     // Aquí iría la lógica del carrito
                   }}
                 >
-                  <ShoppingBag className="w-5 h-5" />
+                  <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
               </div>
 
